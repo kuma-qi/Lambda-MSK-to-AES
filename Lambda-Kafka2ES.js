@@ -1,7 +1,7 @@
 var https = require('https');
 var zlib = require('zlib');
 var crypto = require('crypto');
-var endpoint = 'xxxxxxxxxxxxxxxxx.us-east-1.es.amazonaws.com';
+var endpoint = 'xxxxxxxxxxxxxxxxx.us-east-1.es.amazonaws.com'; //need to modify 
 var logFailedResponses = true;
 
 exports.handler = function(recordList, context) {
