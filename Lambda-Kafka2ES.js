@@ -1,3 +1,9 @@
+/*
+ * Sample node.js code for AWS Lambda to upload the JSON documents
+ * pushed from MSK to Amazon Elasticsearch.
+ *
+ */
+
 var https = require('https');
 var zlib = require('zlib');
 var crypto = require('crypto');
@@ -58,7 +64,9 @@ function transformMSK(logEvents) {
     });
     return bulkRequestBody;
 }
-    
+/*
+ * Post the given document to Elasticsearch
+ */    
 function post(body, callback) {
     var requestParams = buildRequest(endpoint, body);
     var request = https.request(requestParams, function(response) {
